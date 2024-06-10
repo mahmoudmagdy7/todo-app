@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> TODO App | Route Academy </title>
+
+  <!-- styles  -->
+  <link rel="stylesheet" href="./assets/all.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <main class="container">
+
+    <div class="content-wrapper m-auto">
+      <!-- add task input -->
+      <form id="form" class="w-100 input d-flex align-items-center gap-2 justify-content-center">
+        <input id="add-task-input" class="flex-grow-1" type="text" placeholder="Add a new task">
+        <button onclick="addTask()" id="add-task-button" class="btn btn-dark" onclick="addTask()"><i
+            class="fa-solid fa-plus"></i></button>
+        <input onkeyup="searchTask()" id="search" class="flex-grow-1" type="text" placeholder="search task">
+      </form>
+      <p id="validation-alert" class="text-danger mt-1 ms-2 d-none">Task can not be empty!</p>
+      <!--  Tasks todo -->
+      <div class="cards-wrapper my-4">
+        <p id="todo-count">Tasks to do - 0 </p>
+        <div id="tasks-body" class="tasks-body ">
+
+          // to do tasks appears here
+
+        </div>
+      </div>
+      <!-- tasks done -->
+      <div class="cards-wrapper my-4">
+        <p id="done-count">Done - 0 </p>
+        <div id="done-body" class="tasks-body">
+          <div class="done-card d-flex justify-content-between align-items-center mb-3">
+            <p class="m-0 text-decoration-line-through">first</p>
+            <div class="icons d-flex gap-4">
+              <i class="action-btn fa-solid fa-circle-xmark"></i>
+              <i class="action-btn fa-solid fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+
+  <script src="./JS/all.min.js"></script>
+  <script src="./JS/bootstrap.bundle.js"></script>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>
